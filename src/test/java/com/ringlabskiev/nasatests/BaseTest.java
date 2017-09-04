@@ -1,4 +1,4 @@
-package com.ringlabskiev.features.search;
+package com.ringlabskiev.nasatests;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

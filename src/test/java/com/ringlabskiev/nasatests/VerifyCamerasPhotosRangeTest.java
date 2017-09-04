@@ -1,4 +1,4 @@
-package com.ringlabskiev.features.search;
+package com.ringlabskiev.nasatests;
 
 import io.restassured.path.json.JsonPath;
 import net.serenitybdd.junit.runners.SerenityRunner;
@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.not;

@@ -1,4 +1,4 @@
-package com.ringlabskiev.steps;
+package com.ringlabskiev.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

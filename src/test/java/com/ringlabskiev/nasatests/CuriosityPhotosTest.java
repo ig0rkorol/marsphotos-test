@@ -1,6 +1,6 @@
-package com.ringlabskiev.features.search;
+package com.ringlabskiev.nasatests;
 
-import com.ringlabskiev.steps.NasaUtils;
+import com.ringlabskiev.utils.NasaUtils;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import net.serenitybdd.junit.runners.SerenityRunner;
