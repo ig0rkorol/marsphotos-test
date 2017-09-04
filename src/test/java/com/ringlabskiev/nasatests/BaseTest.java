@@ -30,7 +30,7 @@ public class BaseTest {
      * @param sol
      * @return Response
      */
-    protected Response getCurisityDataBySol(int sol){
+    Response getCurisityDataBySol(int sol){
         LOGGER.info("Get Curiosity data use sol parameter value {}", sol);
         return SerenityRest.get("?sol={sol1}&api_key={api_key}", sol, API_KEY)
                 .andReturn();
@@ -38,10 +38,10 @@ public class BaseTest {
 
     /**
      * Request endpoint with earth_date query parameters
-     * @param date
+     * @param date earth date
      * @return Response
      */
-    protected Response getCuriosityDataByEarthDate(String date){
+    Response getCuriosityDataByEarthDate(String date){
         LOGGER.info("Get Curiosity data use earth_date parameter value {}", date);
         return SerenityRest.get("?earth_date={earth_date}&api_key={api_key}", date, API_KEY)
                 .andReturn();
@@ -52,9 +52,8 @@ public class BaseTest {
      * @param actual value of code
      * @param expected value of code
      * @param parameterName name of query parameter
-     * @return Response
      */
-    protected void verifyResponseCode(int actual, int expected, String parameterName){
+    void verifyResponseCode(int actual, int expected, String parameterName){
         assertThat("Wrong response status code for request by "+ parameterName +" parameter", actual, equalTo(expected));
     }
 }

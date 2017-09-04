@@ -15,8 +15,8 @@ import java.util.List;
  */
 public class NasaUtils {
     private static final Logger LOGGER = LoggerFactory.getLogger(NasaUtils.class);
-    static final float SECONDS_IN_SOL = 88775.244147F;
-    static final String CURIOSITY_START_DATE = "06/08/2012";
+    private static final float SECONDS_IN_SOL = 88775.244147F;
+    private static final String CURIOSITY_START_DATE = "06/08/2012";
 
     /**
      *
@@ -40,7 +40,7 @@ public class NasaUtils {
 
     /**
      * Compare min and max photos count from cameras
-     * @param camerasPhotoCount
+     * @param camerasPhotoCount list with photos per each camera
      * @return false if photos count different at least 10 times
      */
     public  static boolean doesCamerasWorkWell(List camerasPhotoCount){
