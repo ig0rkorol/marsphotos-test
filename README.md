@@ -11,5 +11,5 @@ If any camera made 10 times less images than any other - test fails.
 
 ### Run from command line:
 Open Terminal and navigate project directory. Then
-1) _mvn integration-test serenity:aggregate -Dwebdriver.driver=chrome_
+1) _mvn integration-test serenity:aggregate_
 2) _find html report in /target/site/ then open in browser index.html_
