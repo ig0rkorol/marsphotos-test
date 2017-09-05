@@ -40,9 +40,13 @@ public class CuriosityPhotosTest extends BaseTest{
     private void verifyImagesIdentical(List solItems, List earthItems) throws UnsupportedEncodingException {
         int size=solItems.size();
         for(int i=0;i<size;i++){
-            String urlImageBySol = getImageBase64String((String) ((HashMap)solItems.get(0)).get("img_src"));
-            String urlImageByEarth = getImageBase64String((String) ((HashMap)earthItems.get(0)).get("img_src"));
-            assertThat("Images different for camera ", urlImageByEarth, equalTo(urlImageBySol));
+            String urlSol = (String)((HashMap)solItems.get(0)).get("img_src");
+            String urlEarth = (String)((HashMap)earthItems.get(0)).get("img_src");
+            String urlImageBySol = getImageBase64String(urlSol);
+            String urlImageByEarth = getImageBase64String(urlEarth);
+            if (!urlSol.equals(urlEarth)){
+                assertThat("Images different for camera ", urlImageByEarth, equalTo(urlImageBySol));
+            }
         }
     }
 
